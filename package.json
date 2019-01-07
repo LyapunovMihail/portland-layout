@@ -1,0 +1,38 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "author": "d.rybkin",
+  "license": "ISC",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "devDependencies": {
+    "browser-sync": "*",
+    "del": "*",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "*",
+    "gulp-cheerio": "*",
+    "gulp-concat": "*",
+    "gulp-concat-css": "*",
+    "gulp-css-unit": "*",
+    "gulp-csso": "*",
+    "gulp-eslint": "*",
+    "gulp-if": "*",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-load-plugins": "*",
+    "gulp-minifier": "*",
+    "gulp-notify": "*",
+    "gulp-pug": "*",
+    "gulp-replace": "*",
+    "gulp-sass": "^4.0.0",
+    "gulp-sourcemaps": "*",
+    "gulp-svg-sprite": "*",
+    "gulp-svgmin": "*",
+    "gulp.spritesmith": "*"
+  },
+  "dependencies": {
+    "normalize.css": "*"
+  },
+  "main": "gulpfile.js",
+  "description": ""
+}

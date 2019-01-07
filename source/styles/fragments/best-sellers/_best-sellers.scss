@@ -1,0 +1,107 @@
+.best-sellers {
+	width: 1170px;
+	height: 396px;
+	margin: 49px auto 0;
+	background-color: #ffffff;
+	border-radius: 5px;
+
+	&__title {
+		text-align: center;
+		height: 56px;
+		border-bottom: 1px solid #f0f2f7;
+		font-size: 11px;
+		line-height: 56px;
+		letter-spacing: 0.6px;
+		text-transform: uppercase;
+		color: #343e5c;
+	}
+
+	&__list {
+		@include list-drop;
+		box-sizing: border-box;
+		display: flex;
+		height: 340px;
+	}
+
+	&-item {
+		width: 299px;
+		border-right: 1px solid #f0f2f7;
+		text-align: center;
+
+		&:nth-child(1) {
+			width: 284px;
+		}
+		&:nth-child(4) {
+			width: 285px;
+		} 
+
+/* Фикс недостатка макета - обрезанных изображений*/
+		&:nth-child(1) .best-sellers-item__img {
+			bottom: 12px;
+		}
+		&:nth-child(2) .best-sellers-item__img {
+			bottom: -18px
+		} 
+		&:nth-child(3) .best-sellers-item__img {
+			bottom: -6px;
+		}
+		&:nth-child(4) .best-sellers-item__img {
+			bottom: -64px;
+		} 
+/*-------------------------------------------------*/
+
+		&__link {
+			position: relative;
+			overflow: hidden;
+			display: block;
+			height: 223px;
+		}
+
+		&__img {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 0 auto;
+		} 
+
+		&__info {
+			height: 117px;
+			padding: 9px;
+		}
+
+		&__title {
+			font-size: 16px;
+			line-height: normal;
+			letter-spacing: -0.5px;
+			color: #343e5c;
+		}
+
+		&__color {
+			margin-top: 6px;
+			font-size: 11px;
+			line-height: normal;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			color: #a1a8bd;
+		}
+
+		&__price {
+			margin-top: 17px;
+			font-size: 14px;
+			line-height: normal;
+			letter-spacing: -0.5px;
+
+			&-past {
+				margin-right: 20px;
+				color: #b8bfd3;
+				text-decoration: line-through;
+			}
+
+			&-discount {
+				color: #343e5c;				
+			}
+		}
+
+	}
+}

@@ -1,0 +1,107 @@
+.footer {
+	position: relative;
+	min-width: 1170px;
+	height: 300px;
+	background-color: #222328;
+
+	@include before {
+		top: 150px;
+		left: 0;
+		right: 0;
+		height: 1px;
+		width: 1200px;
+		margin: 0 auto;
+		background-color: #2d2e33;
+	} 
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 150px;
+		width: 1170px;
+		margin: 0 auto;
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 1170px;
+		height: 149px;
+		margin: 0 auto;
+	}
+
+	&-nav {
+		@include list-drop;
+		display: flex;
+		justify-content: space-between;
+		width: 387px;
+		margin-left: 10px;
+
+		&__link {
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: 0.6px;
+			color: #ffffff;
+		}
+	}
+
+	&__quote {
+		width: 525px;
+		font-family: "Crimson Text", Times New Roman, serif;
+		font-style: italic;
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: 0.1px;
+		font-weight: 400;
+		color: #656569;
+	}
+
+	&-links {
+		@include list-drop;
+		display: flex;
+		justify-content: space-between;
+		width: 300px;
+
+		&__link {
+			font-size: 11px;
+			line-height: normal;
+			text-transform: uppercase;
+			letter-spacing: 0.7px;
+			color: #656569;
+		}
+	}
+}
+
+.social-list {
+	@include list-drop;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100px;
+	margin-right: 5px;
+
+	&__link {
+		display: block;
+		background: center no-repeat;
+
+		&_tw {
+		    width: 17px;
+		    height: 14px;
+			background-image: url('../img/icon/Twitter-icon.png');
+		}
+
+		&_fb {
+		    width: 9px;
+		    height: 18px;
+			background-image: url('../img/icon/Facebook-icon.png');
+		}
+
+		&_gl {
+		    width: 24px;
+		    height: 15px;
+			background-image: url('../img/icon/Google-Icon.png');
+		}
+	}
+}

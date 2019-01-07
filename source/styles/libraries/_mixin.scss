@@ -1,0 +1,140 @@
+@mixin before {
+	&::before {
+		content: "";
+		position: absolute;
+		@content
+	}
+}
+
+@mixin after {
+	&::after {
+		content: "";
+		position: absolute;
+		@content
+	}
+}
+
+@mixin list-drop {
+	padding: 0;
+	margin: 0; 
+	list-style: none;
+}
+
+@mixin fieldset-drop {
+	padding: 0;
+	margin: 0; 
+	border: none;
+}
+
+@mixin legend {
+	width: 100%;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	padding-left: 19px;
+	padding-right: 20px;
+	border-bottom: 1px solid #f0f2f7;
+	font-size: 11px;
+	line-height: normal;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+	cursor: default;
+}
+
+@mixin pseudo-caret($deg, $color) {
+	&::after {
+		content: "";
+		width: 5px;
+		height: 5px;
+		border-right: 2px solid $color;
+		border-bottom: 2px solid $color;
+		transform: rotate($deg);
+		color: #c2c5ce;
+		@content
+	}
+}
+
+
+@mixin custom-checkbox($label-ml, $checkbox-br: 5px) {
+
+	label {
+		position: relative;
+		margin-left: $label-ml;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: -($label-ml);
+			top: calc(50% - 10px);
+			box-sizing: border-box;
+			width: 20px;
+			height: 20px;
+			border: 2px solid #e4e8f0;
+			border-radius: $checkbox-br;
+			background-color: #ffffff;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: -($label-ml) + 7px;
+			top: calc(50% - 5px);
+			display: none;
+			width: 5px;
+			height: 7px;
+			border-right: 2px solid #ffffff;
+			border-bottom: 2px solid #ffffff;
+			transform: rotate(45deg);
+		}
+	}
+
+	input:checked {
+
+		+ label::before {
+			background-color: #00e2aa;
+			border: none;
+		}
+
+		+ label::after {
+			display: inherit;
+		}
+	} 
+}
+
+@mixin custom-radiobutton($label-ml) {
+
+	label {
+		position: relative;
+		margin-left: $label-ml;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: -($label-ml);
+			top: calc(50% - 9px);
+			box-sizing: border-box;
+			width: 18px;
+			height: 18px;
+			border: 2px solid #e4e8f0;
+			border-radius: 10px;
+			background-color: #ffffff;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: -($label-ml) + 6px;
+			top: calc(50% - 3px);
+			display: none;
+			width: 6px;
+			height: 6px;
+			border-radius: 5px;
+			background-color: #00deea;	
+		}
+	}
+
+	input:checked + label::after { 
+		display: inherit;
+	} 
+}

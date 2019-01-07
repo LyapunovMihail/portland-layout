@@ -1,0 +1,118 @@
+.conditions {
+	position: relative;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	width: 1170px;
+	height: 56px;
+	margin: 50px auto 0;
+	padding-left: 22px;
+	padding-right: 22px;
+	border-radius: 5px;
+	font-size: 11px;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+	background-color: #ffffff;
+	color: #a1a8bd;
+	@include before {
+        left: 245px;
+        height: 100%;
+        width: 2px;
+        background-color: #f2f2f2;
+    }
+    @include after {
+        right: 226px;
+        height: 100%;
+        width: 2px;
+        background-color: #f2f2f2;
+    }
+
+	&__keywords {
+		margin-left: 53px;
+
+		input {
+			width: 163px;
+			margin-left: 7px;
+		}
+	}
+
+	&__price {
+		margin-left: 29px;
+
+		input {
+			width: 64px;
+		}
+
+		label + input {
+			margin-left: 8px;
+			margin-right: 6px;
+		}
+
+		input + input {
+			margin-left: 5px;
+		}
+	}
+
+	&__shipping {
+		margin-left: 32px;
+		font-size: 13px;
+		letter-spacing: normal;
+		text-transform: none;
+		color: #343e5c;
+
+		@include custom-checkbox($label-ml: 28px, $checkbox-br: 11px);
+		
+	}
+
+	&__input {
+		box-sizing: border-box;
+		height: 32px;
+		padding: 11px 15px;
+		border: 1px solid #e3e8f0;
+		border-radius: 19px;
+		font-size: 13px;
+		font-weight: 700;
+		color: #343e5c;
+		background-color: #f0f2f7;
+
+		&::-webkit-input-placeholder {
+            color: #b9bfd3;
+        }
+	}
+}
+
+.sort {
+	&__list {
+		color: #343e5c;
+		cursor: pointer;
+		@include list-drop;
+		margin-left: 49px;
+
+		li {
+			@include pseudo-caret($deg: 45deg, $color: #c2c5ce) {
+				display: inline-block;
+				margin-left: 9px;
+				margin-bottom: 2px;
+			}
+		}
+	}
+}
+
+.shipto {
+	margin-left: 62px;
+		
+	&__list {
+		color: #343e5c;
+		cursor: pointer;
+		@include list-drop;
+		margin-left: 80px;
+
+		li {
+			@include pseudo-caret($deg: 45deg, $color: #c2c5ce) {
+				display: inline-block;
+				margin-left: 9px;
+				margin-bottom: 2px;
+			}
+		}
+	}
+}

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Portland</title>
+    <link href="css/app.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="header">
+        <h1 class="visually-hidden">Portland shop</h1>
+        <div class="header__container">
+            <div class="header__toolbar toolbar">
+                <button class="toolbar__button"><span class="visually-hidden">Menu</span></button>
+                <a class="toolbar__logo" href="index.html">
+                    <img src="img/content/portland.png" alt="logo" width="92" height="25">
+                </a>
+                <ul class="toolbar__list">
+                    <li class="toolbar__item"><a class="toolbar__link" href="#">Home</a></li>
+                    <li class="toolbar__item"><a class="toolbar__link" href="#">Devices</a></li>
+                    <li class="toolbar__item"><a class="toolbar__link" href="#">Delivery & Payment</a></li>
+                    <li class="toolbar__item"><a class="toolbar__link" href="#">Guarantee</a></li>
+                    <li class="toolbar__item"><a class="toolbar__link" href="#">About Us</a></li>
+                </ul>
+                <a class="toolbar__cart" href="#">cart</a>
+                <a class="toolbar__login" href="#">sign in</a>
+            </div>
+            <div class="header__main-nav main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Top Sales</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Brand Focus</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link main-nav__link_active" href="#">Hi-tech</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Best Sellers</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Projects</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Support</a></li>
+                </ul>
+                <input class="main-nav__search" placeholder="I’m looking for ..." />
+            </div>
+        </div>
+
+        <section class="slider">
+            <h2 class="visually-hidden">Наши лучшие товары</h2>
+            <div class="slider__item slider__item_1">
+                <div class="slider__text-block">
+                    <h3>iPhone 6 32Gb Black</h3>
+                    <p>At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                    <a href="#">Buy Now</a>
+                </div>
+                <button class="slider__next-button"></button>
+                <ul class="slider__pagination slider-pagination">
+                    <li><button class="slider-pagination__button slider-pagination__button_active"></button></li>
+                    <li><button class="slider-pagination__button"></button></li>
+                    <li><button class="slider-pagination__button"></button></li>
+                    <li><button class="slider-pagination__button"></button></li>
+                </ul>
+            </div> 
+        </section>
+    </header>
+
+    <main>
+        <section class="conditions">
+            <h2 class="visually-hidden">conditions</h2>
+            <p class="conditions__sort sort">
+                <label for="sort-list" tabindex="0">sort by:</label>
+                <ul id="sort-list" class="sort__list" tabindex="0">
+                    <li>best match</li>
+                </ul>
+            </p>
+            <p class="conditions__keywords">
+                <label for="keywords-input" tabindex="0">keywords</label>
+                <input id="keywords-input" class="conditions__input" type="text" placeholder="Tablet"/>
+            </p>
+            <p class="conditions__price">
+                <label for="price-input" tabindex="0">price</label>
+                <input id="price-input" class="conditions__input" type="text" value="10" />-<input class="conditions__input" type="text" value="1000" />
+            </p>
+            <p class="conditions__shipping">
+                <input id="shipping-input" class="visually-hidden" type="checkbox" checked/>
+                <label for="shipping-input" tabindex="0">Free Shipping</label>
+            </p>
+            <p class="conditions__shipto shipto">
+                <label for="shipto-list" tabindex="0">ship to:</label>
+                <ul id="shipto-list" class="shipto__list" tabindex="0">
+                    <li>USA</li>
+                </ul>
+            </p>
+        </section>
+
+        <div class="index-columns">
+            <section class="filters">
+                <h2 class="visually-hidden">filters</h2>
+                <div class="filters__categories categories">
+                    <ul class="categories__list">
+                        <li class="categories__item">Top Sales</li>
+                        <li class="categories__item">Brand Focus</li>
+                        <li class="categories__item categories__item_open subcategory">Hi-Tech</li>
+                            <ul class="subcategory__list">
+                                <li class="subcategory__item"><a href="#">Cell Phones</a></li>
+                                <li class="subcategory__item"><a href="#">Cameras</a></li>
+                                <li class="subcategory__item"><a href="#">Computers</a></li>
+                                <li class="subcategory__item"><a href="#">Tv, Audio</a></li>
+                                <li class="subcategory__item"><a href="#">Video Games</a></li>
+                            </ul>
+                        <li class="categories__item">Home</li>
+                        <li class="categories__item">Sale</li>
+                    </ul>
+                </div>
+
+                <div class="filters__block">
+                    <fieldset class="filters__available">
+                        <legend class="filters__legend">available</legend>
+                        <ul class="filters__list">
+                            <li class="filters__option-available">
+                                <div><input id="available-radio-1" class="visually-hidden" type="radio" name="available" value="storage" checked/>
+                                <label for="available-radio-1" tabindex="0">In Storage</label>
+                                <span class="filters__badge">45</span>
+                                </div>
+                            </li>
+                            <li class="filters__option-available">
+                                <input id="available-radio-2" class="visually-hidden" type="radio" name="available" value="online-shop"/>
+                                <label for="available-radio-2" tabindex="0">In Online-Shop</label>
+                                <span class="filters__badge">12</span>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="filters__brands">
+                        <legend class="filters__legend">brands</legend>
+                        <button class="filters__all">all</button>
+                        <ul class="filters__list">
+                            <li class="filters__option-brands">
+                                <input class="visually-hidden" type="checkbox" name="apple" id="brands-apple" checked>
+                                <label for="brands-apple" tabindex="0">Apple</label>
+                                <span class="filters__badge">32</span>
+                            </li>
+                            <li class="filters__option-brands">
+                                <input class="visually-hidden" type="checkbox" name="jbl" id="brands-jbl">
+                                <label for="brands-jbl" tabindex="0">JBL</label>
+                                <span class="filters__badge">14</span>
+                            </li>
+                            <li class="filters__option-brands">
+                                <input class="visually-hidden" type="checkbox" name="bose" id="brands-bose">
+                                <label for="brands-bose" tabindex="0">Bose</label>
+                                <span class="filters__badge">3</span>
+                            </li>
+                            <li class="filters__option-brands">
+                                <input class="visually-hidden" type="checkbox" name="nest" id="brands-nest">
+                                <label for="brands-nest" tabindex="0">Nest</label>
+                                <span class="filters__badge">5</span>
+                            </li>
+                          </ul>
+                    </fieldset>
+                </div>
+
+                <div class="filters__block">
+                    <fieldset class="filters__condition">
+                        <legend class="filters__legend">condition</legend>
+                        <button class="filters__all">see all</button>
+                        <ul class="filters__list">
+                            <li class="filters__option-condition">
+                                <input class="visually-hidden" type="checkbox" name="new" id="condition-new" checked>
+                                <label for="condition-new" tabindex="0">New</label>
+                            </li>
+                            <li class="filters__option-condition">
+                              <input class="visually-hidden" type="checkbox" name="mr" id="condition-mr">
+                              <label for="condition-mr" tabindex="0">Manufacturer Refurbished</label>
+                            </li>
+                            <li class="filters__option-condition">
+                                <input class="visually-hidden" type="checkbox" name="sr" id="condition-sr">
+                                <label for="condition-sr" tabindex="0">Seller Refurbished</label>
+                            </li>
+                            <li class="filters__option-condition">
+                                <input class="visually-hidden" type="checkbox" name="used" id="condition-used" checked>
+                                <label for="condition-used" tabindex="0">Used</label>
+                            </li>
+                            <li class="filters__option-condition">
+                                <input class="visually-hidden" type="checkbox" name="fponv" id="condition-fponv">
+                                <label for="condition-fponv" tabindex="0">For Parts or not Working</label>
+                            </li>
+                          </ul>
+                    </fieldset>
+                </div>
+
+                <div class="filters__block">
+                    <fieldset class="filters__delivery-options">
+                        <legend class="filters__legend">delivery options</legend>
+                        <ul class="filters__list">
+                            <li class="filters__option-delivery-options">
+                                <input id="delivery-options-radio-1" class="visually-hidden" type="radio" name="delivery-options" value="free" checked/>
+                                <label for="delivery-options-radio-1" tabindex="0">Free</label>
+                            </li>
+                            <li class="filters__option-delivery-options">
+                                <input id="delivery-options-radio-2" class="visually-hidden" type="radio" name="delivery-options" value="price"/>
+                                <label for="delivery-options-radio-2" tabindex="0">$4.99</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </section>
+
+            <section class="products">
+                <h2 class="visually-hidden">products</h2>
+                <ul class="products__list">
+                    <li class="products__item products-item">
+                        <a href="product.html" class="products-item__link">
+                            <img src="img/catalog/photo-1.jpg" alt="apple TV" width="270" height="380">
+                            <div class="products-item__info">
+                                <h3 class="products-item__title">Apple TV 32GB</h3>
+                                <div class="products-item__align-block">
+                                    <p class="products-item__color">Black</p>
+                                    <p class="products-item__price">$49.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="products__item products-item">
+                        <a href="product.html" class="products-item__link">
+                            <img src="img/catalog/photo-2.jpg" alt="Pebble Time" width="270" height="380">
+                            <div class="products-item__info">
+                                <h3 class="products-item__title">Pebble Time</h3>
+                                <div class="products-item__align-block">
+                                    <p class="products-item__color">Red</p>
+                                    <p class="products-item__price">$29.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="products__item products-item">
+                        <a href="product.html" class="products-item__link">
+                            <img src="img/catalog/photo-3.jpg" alt="zendure usb" width="270" height="380">
+                            <div class="products-item__info">
+                                <h3 class="products-item__title">Zendure 4-Port USB</h3>
+                                <div class="products-item__align-block">
+                                    <p class="products-item__color">White</p>
+                                    <p class="products-item__price">$49.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="products__item products-item">
+                        <a href="product.html" class="products-item__link">
+                            <img src="img/catalog/photo-4.jpg" alt="withingsSmartBody" width="207" height="130">
+                            <div class="products-item__info">
+                                <h3 class="products-item__title">Withings Smart Body<br>&nbsp;Analyzer ws-50</h3>
+                                <div class="products-item__align-block">
+                                    <p class="products-item__color">Black</p>
+                                    <p class="products-item__price">$39.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="products__item-wide products-item-wide">
+                        <a href="product.html">
+                            <img src="img/catalog/photo-5.jpg" alt="jbl Charge 2+" width="570" height="305">
+                        </a>
+                        <div class="products-item-wide__info">
+                            <div class="products-item-wide__align-block">
+                                <h3 class="products-item-wide__title">JBL Charge 2+</h3>
+                                <p class="products-item-wide__color">Black</p>
+                            </div>
+                            <p class="products-item-wide__buy"><span class="products-item-wide__buy-info">16&nbsp; gb</span><a class="products-item-wide__buy-button" href="product.html">buy now</a></p>
+                        </div>
+                        <p class="products-item-wide__price">$39.99</p>
+                    </li>
+                    <li></li>
+                    <li class="products__item products-item">
+                        <a href="product.html" class="products-item__link">
+                            <img src="img/catalog/photo-6.jpg" alt="ollo Clip New" width="270" height="380">
+                            <div class="products-item__info">
+                                <h3 class="products-item__title">Ollo Clip New</h3>
+                                <div class="products-item__align-block">
+                                    <p class="products-item__color">Silver</p>
+                                    <p class="products-item__price">$19.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="products__item products-item">
+                        <a href="product.html" class="products-item__link">
+                            <img src="img/catalog/photo-7.jpg" alt="fitbit Charge" width="270" height="380">
+                            <div class="products-item__info">
+                                <h3 class="products-item__title">Fitbit Charge HR Heart Rate<br>and Activity Tracker</h3>
+                                <div class="products-item__align-block">
+                                    <p class="products-item__color">Black</p>
+                                    <p class="products-item__price">$19.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="products__item products-item">
+                        <a href="product.html" class="products-item__link">
+                            <img src="img/catalog/photo-8.jpg" alt="Apple Watch" width="194" height="194">
+                            <div class="products-item__info">
+                                <h3 class="products-item__title">Apple Watch Sport 38mm<br>Silver Aluminum Case</h3>
+                                <div class="products-item__align-block">
+                                    <p class="products-item__color">White</p>
+                                    <p class="products-item__price">$49.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="products__item products-item">
+                        <a href="product.html" class="products-item__link">
+                            <img src="img/catalog/photo-9.jpg" alt="Bose SoundLink Headphones" width="270" height="380">
+                            <div class="products-item__info">
+                                <h3 class="products-item__title">Bose SoundLink<br>On-Ear Headphones</h3>
+                                <div class="products-item__align-block">
+                                    <p class="products-item__color">White</p>
+                                    <p class="products-item__price">$119.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="products__item products-item">
+                        <a href="product.html" class="products-item__link">
+                            <img src="img/catalog/photo-10.jpg" alt="Sonos" width="195" height="195">
+                            <div class="products-item__info">
+                                <h3 class="products-item__title">Sonos Play-1 Wireless<br>HiFi System</h3>
+                                <div class="products-item__align-block">
+                                    <p class="products-item__color">Black</p>
+                                    <p class="products-item__price">$99.99</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="products__item products-item">
+                        <a href="product.html" class="products-item__link">
+                            <img src="img/catalog/photo-11.jpg" alt="Nest" width="270" height="380">
+                            <div class="products-item__info products-item__info-special">
+                                <h3 class="products-item__title">Nest Learning Thermostat,<br>3rd Generation</h3>
+                                <p class="products-item__price">$49.99</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="pagination">
+            <a class="pagination__link-prev" href="#"><span class="visually-hidden">Предыдущая</span></a>
+            <ul class="pagination__page-numbers">
+                <li><a class="pagination__link" href="#">1</a></li>
+                <li><a class="pagination__link" href="#">2</a></li>
+                <li><a class="pagination__link" href="#">3</a></li>
+                <li><a class="pagination__link pagination__link_active" href="#">4</a></li>
+                <li><a class="pagination__link" href="#">5</a></li>
+                <li><a class="pagination__link" href="#">6</a></li>
+                <li><a class="pagination__link" href="#">7</a></li>
+                <li><a class="pagination__link" href="#">8</a></li>
+            </ul>
+            <a class="pagination__link-next" href="#"><span class="visually-hidden">Следующая</span></a>
+        </div>
+
+        <section class="best-sellers">
+            <h2 class="best-sellers__title">best sellers</h2>
+            <ul class="best-sellers__list">
+                <li class="best-sellers__item best-sellers-item">
+                    <a href="product.html" class="best-sellers-item__link">
+                        <img class="best-sellers-item__img" src="img/content/img-1.png" alt="beanie" width="181" height="181">
+                    </a>
+                    <div class="best-sellers-item__info">
+                        <h3 class="best-sellers-item__title">Beanie</h3>
+                        <p class="best-sellers-item__color">Green</p>
+                        <p class="best-sellers-item__price"><span class="best-sellers-item__price-past">£39.99</span><span class="best-sellers-item__price-discount">£29.99</span></p>
+                    </div>
+                </li>
+                <li class="best-sellers__item best-sellers-item">
+                    <a href="product.html" class="best-sellers-item__link">
+                        <img class="best-sellers-item__img" src="img/content/img-2.png" alt="trainers" width="167" height="252">
+                    </a>
+                    <div class="best-sellers-item__info">
+                        <h3 class="best-sellers-item__title">T-Shirt With a Print</h3>
+                        <p class="best-sellers-item__color">Dark Blue</p>
+                        <p class="best-sellers-item__price"><span class="best-sellers-item__price-past">£29.99</span><span class="best-sellers-item__price-discount">£19.99</span></p>
+                    </div>
+                </li>
+                <li class="best-sellers__item best-sellers-item">
+                    <a href="product.html" class="best-sellers-item__link">
+                        <img class="best-sellers-item__img" src="img/content/img-3.png" alt="jacket" width="151" height="227">
+                    </a>
+                    <div class="best-sellers-item__info">
+                        <h3 class="best-sellers-item__title">Pile-Lined Hooded Jacket</h3>
+                        <p class="best-sellers-item__color">Dark Blue</p>
+                        <p class="best-sellers-item__price"><span class="best-sellers-item__price-past">£49.99</span><span class="best-sellers-item__price-discount">£39.99</span></p>
+                    </div>
+                </li>
+                <li class="best-sellers__item best-sellers-item">
+                    <a href="product.html" class="best-sellers-item__link">
+                        <img class="best-sellers-item__img" src="img/content/img-4.png" alt="bluet" width="183" height="274">
+                    </a>
+                    <div class="best-sellers-item__info">
+                        <h3 class="best-sellers-item__title">Trainers</h3>
+                        <p class="best-sellers-item__color">Space Grey</p>
+                        <p class="best-sellers-item__price"><span class="best-sellers-item__price-past">£39.99</span><span class="best-sellers-item__price-discount">£29.99</span></p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="testimonials">
+            <div class="testimonials__container">
+                <h2 class="testimonials__title">What Our Customers Have to Say</h2>
+                <h3 class="testimonials__anounce">Couple of Words About This Stories Section</h3>
+                <ul class="testimonials__list">
+                    <li class="testimonials__card card">
+                        <div class="card__customer card-customer card-customer_photo-1">
+                            <p class="card-customer__name">Celia Fields</p>
+                            <p class="card-customer__title">UX Expert</p>
+                        </div>
+                        <p class="card__review" lang="en">This I have produced as a scantling of Jack’s great eloquence and the force of his reasoning upon such abstruse matters.</p>
+                    </li>
+                    <li class="testimonials__card card">
+                        <div class="card__customer card-customer card-customer_photo-2">
+                            <p class="card-customer__name">Alexander Lee</p>
+                            <p class="card-customer__title">Founder</p>
+                        </div>
+                        <p class="card__review">Looking cautiously round, to ascer-tain that they were not overheard, the two hags cowered nearer to the fire, and chuckled heartily.</p>
+                    </li>
+                    <li class="testimonials__card card">
+                        <div class="card__customer card-customer card-customer_photo-3">
+                            <p class="card-customer__name">Lenora Sandoval</p>
+                            <p class="card-customer__title">Product Manager</p>
+                        </div>
+                        <p class="card__review">This sounded a very good reason, and Alice was quite pleased to know it. 'I never thought of that before!' <br>she said.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__top">
+            <a class="footer__logo" href="index.html">
+                <img src="img/content/portland-2.png" alt="logo" width="92" height="25">
+            </a>
+
+            <ul class="footer__nav footer-nav">
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Home</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Shop</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link footer-nav__link_active" href="#">Team</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">About Us</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Contacts</a></li>
+            </ul>
+
+            <ul class="footer__social-list social-list">
+                <li class="social-list__item"><a class="social-list__link social-list__link_tw" href="#"><span class="visually-hidden">Twitter</span></a></li>
+                <li class="social-list__item"><a class="social-list__link social-list__link_fb" href="#"><span class="visually-hidden">Facebook</span></a></li>
+                <li class="social-list__item"><a class="social-list__link social-list__link_gl" href="#"><span class="visually-hidden">Google+</span></a></li>
+            </ul>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__quote">
+                She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for having been born on a Friday.
+            </p>
+            <ul class="footer__links footer-links">
+                <li><a class="footer-links__link" href="#">Privacy Policy</a></li>
+                <li><a class="footer-links__link" href="#">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </footer>
+
+  </body>
+</html>

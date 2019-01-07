@@ -1,0 +1,96 @@
+.testimonials {
+	height: 430px;
+	margin-top: 52px;
+	background-color: #ffffff;
+
+	&__container {
+		box-sizing: border-box;
+		width: 1170px;
+		height: 430px;
+		margin: 0 auto;
+		padding: 65px 100px;
+	}
+
+	&__title {
+		text-align: center;
+		color: #222328;
+		font-size: 32px;
+		line-height: normal;
+		letter-spacing: -1px;
+		font-weight: 900;
+	}
+
+	&__anounce {
+		text-align: center;
+		margin-top: 13px;
+		font-family: "Crimson Text", Times New Roman, serif;
+		font-style: italic;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: normal;
+		color: #b9bed1;
+	}
+
+	&__list {
+		@include list-drop;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
+	}
+}
+
+.card {
+	width: 270px;
+
+/*Фикс недостатка макета - неточное выравнивание*/
+	&:nth-child(2) {
+		margin-right: 18px;
+	}
+/*----------------------------------------------*/
+
+	&-customer {
+		padding-left: 58px;
+		letter-spacing: -0.4px;
+
+		&__name {
+			font-size: 14px;
+			line-height: 20px;
+			color: #3a405b;
+		}
+
+		&__title {
+			margin-top: 5px;
+			font-family: "Crimson Text", Times New Roman, serif;
+			font-style: italic;
+			font-size: 17px;
+			line-height: normal;
+			font-weight: 400;
+			color: #b9bed1;
+		}
+
+		&_photo-1 {
+			background-image: url('../img/bg/Photo-1.png');
+			background-repeat: no-repeat;
+		}
+
+		&_photo-2 {
+			background-image: url('../img/bg/Photo-2.png');
+			background-repeat: no-repeat;			
+		}
+
+		&_photo-3 {
+			background-image: url('../img/bg/Photo-3.png');
+			background-repeat: no-repeat;			
+		}
+	}
+
+	&__review {
+		margin-top: 17px;
+		font-family: "Crimson Text", Times New Roman, serif;
+		font-size: 19px;
+		line-height: 24px;
+		font-weight: 400;
+		letter-spacing: -0.2px;
+		color: #3a405b;		
+	}
+}
